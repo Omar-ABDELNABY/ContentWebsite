@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy-gh": "ng build --prod --base-href='https://Omar-ABDELNABY.github.io/ContentWebsite/' && ngh --dir dist/content-FE"
+    "deploy:gh": "ng build --prod --base-href=https://Omar-ABDELNABY.github.io/ContentWebsite/ && ngh --dir dist/content-FE"
   },
   "private": true,
   "dependencies": {
