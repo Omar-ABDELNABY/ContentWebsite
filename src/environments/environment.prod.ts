@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  backendBaseUrl: 'https://custom-content-website.herokuapp.com'
 };

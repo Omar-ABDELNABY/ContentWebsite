@@ -3,12 +3,19 @@ import { NgModule } from '@angular/core';
 import { MainModule } from './main/main.module';
 import { AdminModule } from './admin/admin.module';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+	{
+		path: '**',
+		redirectTo: '/',
+	},
+];
 
 @NgModule({
   declarations: [
@@ -17,9 +24,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
   imports: [
     MainModule,
     AdminModule,
-
+    
+    RouterModule.forRoot(appRoutes),
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,

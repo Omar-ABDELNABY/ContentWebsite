@@ -1,0 +1,18 @@
+
+$color-accent: #ffd740;
+$color-primary: #673AB7;
+
+#container-div{
+    display: flex;
+    height: 100%;
+    background-image: linear-gradient($color-accent, #3B225F);
+
+    #login-div{
+        align-self: center;
+        justify-self: center;
+
+        #login-heading{
+            color: $color-primary;
+        }
+    }
+}

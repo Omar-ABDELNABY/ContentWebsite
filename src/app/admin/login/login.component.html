@@ -1,0 +1,38 @@
+<div id="container-div">
+    <div id="login-div" class="col-xs-12 col-sm-10 col-md-8 col-lg-4 m-auto text-center">
+        <mat-card>
+                <mat-card-title id="login-heading" class="m-5">Welcome to Glob Tech</mat-card-title>
+            <mat-card-content>
+                <form [formGroup]="loginFormGroup" (ngSubmit)="login()">
+                    <p>
+                        <mat-form-field class="w-75">
+                            <input type="text" matInput placeholder="Username" formControlName="userName">
+                            <mat-error *ngIf="loginFormGroup.hasError('required','userName')">username is required</mat-error>
+                            <mat-error *ngIf="loginFormGroup.hasError('minlength','userName')">username must be at least 3 charachters</mat-error>
+                            <mat-error *ngIf="loginFormGroup.hasError('maxlength','userName')">username must not exceed 10 charachters</mat-error>
+                        </mat-form-field>
+                    </p>
+            
+                    <p>
+                        <mat-form-field class="w-75">
+                            <input type="password" matInput placeholder="Password" formControlName="password">
+                            <mat-error *ngIf="loginFormGroup.hasError('required','password')">password is required</mat-error>
+                            <mat-error *ngIf="loginFormGroup.hasError('minlength','password')">password must be at least 5 charachters</mat-error>
+                            <mat-error *ngIf="loginFormGroup.hasError('maxlength','password')">password must not exceed 20 charachters</mat-error>
+                        </mat-form-field>
+                    </p>
+            
+                    <mat-error *ngIf="invalidLogin" class="text-left w-75 m-auto">
+                        Invalid login
+                    </mat-error>
+            
+                    <div class="button mt-5">
+                        <button mat-raised-button="" color="primary" class="mb-3 w-75 mat-raised-button mat-button-base mat-primary" type="submit" mat-button>Login</button>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+
+

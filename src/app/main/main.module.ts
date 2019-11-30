@@ -12,15 +12,20 @@ import {MatIconModule} from '@angular/material/icon';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { MatMenuModule} from '@angular/material/menu';
 import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
+import { AboutComponent } from './about/about.component';
+import { HomeService } from '../common/services/home.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {path: '', component: MainComponent, children: [
-    {path: '', component: HomeComponent},
+    {path: '', redirectTo: '/home', pathMatch: 'full'},
+    {path: 'home', component: HomeComponent},
+    {path: 'about', component: AboutComponent},
   ]},
 ];
 
 @NgModule({
-  declarations: [HomeComponent, MainComponent],
+  declarations: [HomeComponent, MainComponent, AboutComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
@@ -35,6 +40,10 @@ const routes: Routes = [
     MatMenuModule,
     CarouselModule,
     WavesModule,
-  ]
+    HttpClientModule,
+  ],
+  providers: [
+    HomeService,    
+  ],
 })
 export class MainModule { }
