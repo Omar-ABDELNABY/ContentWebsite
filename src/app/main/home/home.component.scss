@@ -1,4 +1,6 @@
 
+$color-primary: #673AB7;
+
 @media only screen and (max-width: 600px) {
     #bg-covering-div{
         margin: 0 !important;
@@ -7,22 +9,27 @@
         .carousel-div{
             max-width: 100vw !important;
             margin: 0 !important;
+            padding: 0 !important;
+        }
+        #all-sections{
+            max-width: 100% !important;
+            padding: 20px;
         }
     }
   }
 
 #bg-div{
     background-image: url('../../../assets/Electronics/ElectronicCircuitboard.jpg');
-    height: 100%;
 
     #bg-covering-div{
         margin: 0 7vw;
-        padding: 0 3vw 100px 3vw;
-        position: relative;
-        // top: 20px;
+        // padding: 0 3vw 100px 3vw;
+        // position: relative;
+        // top: 25px;
         // border-radius: 5px;
         // background-color: #FFFFFF;
-        background: rgba(230, 231, 232, 1);
+        // background: rgba(230, 231, 232, 1);
+        background-color: #FFFFFF;
 
 
         .carousel-div{
@@ -30,11 +37,25 @@
             width: auto;
             height: auto;
             margin: auto;
+            padding: 0 3vw;
         
             img{
                 width: auto; 
                 height: auto;
             }
-        }    
+        }
+        #all-sections{
+            padding: 50px 3vw;
+
+            .section-title{
+                color: #8561C6;
+                margin-bottom: 20px;
+            }
+            .section-body{
+                color: slategray;
+                line-height: 32px;
+                margin-bottom: 40px;;
+            }
+        } 
     }
 }

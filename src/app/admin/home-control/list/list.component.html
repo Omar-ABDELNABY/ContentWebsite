@@ -1,0 +1,22 @@
+
+<div id="top-actions" class="p-3">
+    <button mat-raised-button color="primary">Add New</button>
+    <span id="refresh" class="pr-3 unselectable" (click)="refresh()"><mat-icon>refresh</mat-icon></span>
+</div>
+<mat-card>
+    <div cdkDropList class="sections-list" (cdkDropListDropped)="drop($event)">
+        <div class="section-box" *ngFor="let section of sections" cdkDrag>
+            <div class="row w-100">
+                <div class="col-10">
+                    <p class="section-title">{{ section.title }}</p>
+                    <p class="section-body">{{ section.body | htmlToText | shortenText:100 }}</p>
+                </div>
+                <div class="col-2">
+                    <button mat-button (click)="editSection(section)">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-card>

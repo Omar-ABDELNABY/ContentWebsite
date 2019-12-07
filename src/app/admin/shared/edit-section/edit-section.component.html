@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>Edit Section</h2>
+
+<form [formGroup]="formGroup" (ngSubmit)="save()">
+    <mat-dialog-content>
+        <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Title</mat-label>
+            <input matInput formControlName="title" placeholder="Title">
+        </mat-form-field>
+        <ckeditor formControlName="body" [config]="editorConfig"></ckeditor>
+    </mat-dialog-content>
+    <mat-dialog-actions class="flex-container">
+        <button mat-raised-button color="primary" type="submit">Save</button>
+        <button mat-raised-button mat-dialog-close>Cancel</button>        
+    </mat-dialog-actions>
+</form>

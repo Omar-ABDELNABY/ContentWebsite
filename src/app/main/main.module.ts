@@ -15,6 +15,9 @@ import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
 import { AboutComponent } from './about/about.component';
 import { HomeService } from '../common/services/home.service';
 import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from '../common/shared.module';
+import { FooterComponent } from './footer/footer.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent, children: [
@@ -25,11 +28,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [HomeComponent, MainComponent, AboutComponent],
+  declarations: [HomeComponent, MainComponent, AboutComponent, FooterComponent, NavBarComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-
+    SharedModule,
+    
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,

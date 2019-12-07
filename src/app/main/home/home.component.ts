@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeService } from 'src/app/common/services/home.service';
-import { TopicUnit } from 'src/app/common/models/topic-unit';
+import { Section } from 'src/app/common/models/section';
 
 @Component({
   selector: 'app-home',
@@ -8,17 +8,17 @@ import { TopicUnit } from 'src/app/common/models/topic-unit';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  private _sections;
+  private _sections$;
   constructor(private homeService: HomeService) { }
 
   ngOnInit() {
   }
-  get sections() {
-    return this._sections || this.getTopics();
+  get sections$() {
+    return this._sections$ || this.getSections();
   }
 
-  public getTopics(){
-      this._sections = this.homeService.getUnits();
+  public getSections(){
+      this._sections$ = this.homeService.getSections();
   }
 
 }

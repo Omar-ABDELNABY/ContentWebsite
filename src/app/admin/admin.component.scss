@@ -1,10 +1,26 @@
+$color-accent: #ffd740;
+$color-primary: #673AB7;
+
 .spacer {
     flex: 1 1 auto;
 }
 mat-sidenav {
     width: 200px;
-  }
+
+    mat-nav-list{
+        padding-top: 0;
+
+        .active-link{
+            color: $color-primary;
+            font-weight: 500;
+            background-color: gainsboro;
+        }
+    }
+}
 
 #content-div{
     height: 88vh;
+}
+#logout{
+    cursor: pointer;
 }
