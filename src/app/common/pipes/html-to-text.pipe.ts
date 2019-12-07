@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Utilities } from '../Utilities/utilities';
+import { Utilities } from '../Utilities/Utilities';
 @Pipe({
   name: 'htmlToText'
 })
