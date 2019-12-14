@@ -20,7 +20,8 @@ import { ListComponent } from './home-control/list/list.component';
 import { HomeService } from '../common/services/home.service';
 import { SharedModule } from '../common/shared.module';
 import { EditSectionComponent } from './shared/edit-section/edit-section.component';
-import { CKEditorModule } from 'ckeditor4-angular';
+// import { CKEditorModule } from 'ckeditor4-angular';
+import {NgxWigModule} from 'ngx-wig';
 
 const routes: Routes = [
   {path: 'admin/login', component: LoginComponent},
@@ -61,7 +62,8 @@ const routes: Routes = [
     MatDialogModule,
     MatSnackBarModule,
     MatProgressSpinnerModule,
-    CKEditorModule,
+    // CKEditorModule,
+    NgxWigModule,
   ],
   providers: [
     HomeService,

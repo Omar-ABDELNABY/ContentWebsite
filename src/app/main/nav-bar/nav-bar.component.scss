@@ -59,3 +59,8 @@ img.logo{
         color: $color-accent !important;
     }
 }
+
+//mat-menu to be visible
+mat-toolbar{
+    z-index: 100 !important;
+}

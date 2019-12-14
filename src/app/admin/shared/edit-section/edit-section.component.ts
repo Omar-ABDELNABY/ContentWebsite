@@ -21,7 +21,7 @@ export class EditSectionComponent implements OnInit {
   public editorConfig = {
     toolbar: [ 
       [ 'Bold', 'Italic', 'Underline', 'Strike', 'RemoveFormat', 'NumberedList', 'BulletedList', 
-      'Link', 'Unlink', 'Anchor', 'Image', 'Table', 'SpecialChar', 'Styles', 'Format', 'Font', 'FontSize' ]
+      'Link', 'Unlink', 'Anchor', 'Image', 'Table', 'Styles', 'Format', 'Font', 'FontSize' ]
     ],
   };
 

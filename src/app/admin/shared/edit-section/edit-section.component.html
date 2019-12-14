@@ -6,7 +6,8 @@
             <mat-label>Title</mat-label>
             <input matInput formControlName="title" placeholder="Title">
         </mat-form-field>
-        <ckeditor formControlName="body" [config]="editorConfig"></ckeditor>
+        <!-- <ckeditor formControlName="body" [config]="editorConfig"></ckeditor> -->
+        <ngx-wig  formControlName="body"></ngx-wig>
     </mat-dialog-content>
     <mat-dialog-actions class="flex-container">
         <button mat-raised-button color="primary" type="submit">Save</button>

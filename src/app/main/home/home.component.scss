@@ -18,6 +18,11 @@ $color-primary: #673AB7;
     }
   }
 
+@keyframes underline {
+    0% {width: 0;}
+    100% {width: 100%;}
+}
+
 #bg-div{
     background-image: url('../../../assets/Electronics/ElectronicCircuitboard.jpg');
 
@@ -47,15 +52,50 @@ $color-primary: #673AB7;
         #all-sections{
             padding: 50px 3vw;
 
-            .section-title{
-                color: #8561C6;
-                margin-bottom: 20px;
+            .title-div{
+                display: inline-block;
+
+                .section-title{
+                    font-weight: lighter;
+                    display: inline-block;
+                    color: $color-primary;
+                    margin-bottom: 10px;
+                }
+    
+                .underline-title{
+                    border-bottom: 2px solid $color-primary;
+                    margin-bottom: 20px;
+                    border-radius: 1px;
+                    animation-name: underline;
+                    animation-duration: 1s;
+                    animation-timing-function: ease-in-out;
+                }
             }
+
+
             .section-body{
                 color: slategray;
                 line-height: 32px;
-                margin-bottom: 40px;;
+                margin-bottom: 40px;
+
+                img{
+                    max-width: 100%;
+                    border-radius: 5px;
+                }                
             }
         } 
     }
 }
+
+
+// tmp style
+.picture-with-caption{
+    text-align: center;
+    img{
+        max-width: 100%;
+        max-height: 300px;
+        border-radius: 5px;
+    }
+
+}
+
