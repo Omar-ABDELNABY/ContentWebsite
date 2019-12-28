@@ -2,100 +2,46 @@
 $color-primary: #673AB7;
 
 @media only screen and (max-width: 600px) {
-    #bg-covering-div{
+    .carousel-div{
+        max-width: 100vw !important;
         margin: 0 !important;
         padding: 0 !important;
-        
-        .carousel-div{
-            max-width: 100vw !important;
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-        #all-sections{
-            max-width: 100% !important;
-            padding: 20px;
-        }
     }
-  }
-
-@keyframes underline {
-    0% {width: 0;}
-    100% {width: 100%;}
-}
-
-#bg-div{
-    background-image: url('../../../assets/Electronics/ElectronicCircuitboard.jpg');
-
-    #bg-covering-div{
-        margin: 0 7vw;
-        // padding: 0 3vw 100px 3vw;
-        // position: relative;
-        // top: 25px;
-        // border-radius: 5px;
-        // background-color: #FFFFFF;
-        // background: rgba(230, 231, 232, 1);
-        background-color: #FFFFFF;
-
-
-        .carousel-div{
-            max-width: 90vw;
-            width: auto;
-            height: auto;
-            margin: auto;
-            padding: 0 3vw;
-        
-            img{
-                width: auto; 
-                height: auto;
-            }
-        }
-        #all-sections{
-            padding: 50px 3vw;
-
-            .title-div{
-                display: inline-block;
-
-                .section-title{
-                    font-weight: lighter;
-                    display: inline-block;
-                    color: $color-primary;
-                    margin-bottom: 10px;
-                }
-    
-                .underline-title{
-                    border-bottom: 2px solid $color-primary;
-                    margin-bottom: 20px;
-                    border-radius: 1px;
-                    animation-name: underline;
-                    animation-duration: 1s;
-                    animation-timing-function: ease-in-out;
-                }
-            }
-
-
-            .section-body{
-                color: slategray;
-                line-height: 32px;
-                margin-bottom: 40px;
-
-                img{
-                    max-width: 100%;
-                    border-radius: 5px;
-                }                
-            }
-        } 
+    #all-sections{
+        max-width: 100% !important;
+        padding: 20px;
+        margin: 0;
     }
 }
 
 
-// tmp style
-.picture-with-caption{
-    text-align: center;
+
+.carousel-div{
+    max-width: 90vw;
+    width: auto;
+    height: auto;
+    margin: auto;
+    padding: 0 3vw;
+
     img{
-        max-width: 100%;
-        max-height: 300px;
-        border-radius: 5px;
+        width: auto; 
+        height: auto;
     }
-
 }
+#all-sections{
+    padding: 50px 3vw;
+
+    .section-body{
+        color: slategray;
+        line-height: 32px;
+        margin-bottom: 40px;
+
+        img{
+            max-width: 100%;
+            border-radius: 5px;
+        }                
+    }
+} 
+
+
 

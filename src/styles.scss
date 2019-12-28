@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+$color-primary: #673AB7;
 
 html, body { height: 100%; }
 body { 
@@ -33,3 +34,33 @@ body {
   button{
       outline: none !important;
   }
+
+
+
+//Begin Title with animated underline
+
+@keyframes underline {
+    0% {width: 0;}
+    100% {width: 100%;}
+}
+
+.title-div{
+    display: inline-block;
+
+    .section-title{
+        font-weight: lighter;
+        display: inline-block;
+        color: $color-primary;
+        margin-bottom: 10px;
+    }
+
+    .underline-title{
+        border-bottom: 2px solid $color-primary;
+        margin-bottom: 20px;
+        border-radius: 1px;
+        animation-name: underline;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+    }
+}
+//End Title with animated underline 

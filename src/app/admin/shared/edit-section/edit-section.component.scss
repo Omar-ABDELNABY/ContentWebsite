@@ -1,4 +1,32 @@
+$error-color: #f44336;
+
+h2{
+    color: grey;
+    font-weight: 300;
+}
+
+.image-preview{
+    max-height: 100px;
+    max-width: 200px;
+
+    img{
+        height: 100%;
+    }
+}
+
+mat-icon{
+    color: white;
+}
+
 .flex-container{
     display: flex;
     justify-content: space-between;
+}
+
+.error{
+    color: $error-color;
+    font-size: 75%;
+    font-weight: 400;
+    line-height: 1.125;
+    font-family: Roboto,"Helvetica Neue",sans-serif;
 }

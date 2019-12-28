@@ -22,6 +22,7 @@ import { SharedModule } from '../common/shared.module';
 import { EditSectionComponent } from './shared/edit-section/edit-section.component';
 // import { CKEditorModule } from 'ckeditor4-angular';
 import {NgxWigModule} from 'ngx-wig';
+import { ConfirmDeleteComponent } from './shared/confirm-delete/confirm-delete.component';
 
 const routes: Routes = [
   {path: 'admin/login', component: LoginComponent},
@@ -35,6 +36,7 @@ const routes: Routes = [
 @NgModule({
   entryComponents:[
     EditSectionComponent,
+    ConfirmDeleteComponent,
   ],
   declarations: [
     AdminComponent,
@@ -43,6 +45,7 @@ const routes: Routes = [
     AboutControlComponent,
     ListComponent,
     EditSectionComponent,
+    ConfirmDeleteComponent,
   ],
   imports: [
     CommonModule,

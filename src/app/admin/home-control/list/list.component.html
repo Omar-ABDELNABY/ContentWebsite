@@ -1,6 +1,6 @@
 
 <div id="top-actions" class="p-3">
-    <button mat-raised-button color="primary">Add New</button>
+    <button mat-raised-button color="primary" (click)="addSection(section)">Add New</button>
     <span id="refresh" class="pr-3 unselectable" (click)="refresh()"><mat-icon>refresh</mat-icon></span>
 </div>
 <mat-card>
@@ -14,6 +14,9 @@
                 <div class="col-2">
                     <button mat-button (click)="editSection(section)">
                         <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-button (click)="deleteSection(section)">
+                        <mat-icon>delete</mat-icon>
                     </button>
                 </div>
             </div>

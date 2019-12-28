@@ -1,4 +1,5 @@
-<h2 mat-dialog-title>Edit Section</h2>
+<h2 *ngIf="isEdit" mat-dialog-title>Edit section</h2>
+<h2 *ngIf="!isEdit" mat-dialog-title>Add a new section</h2>
 
 <form [formGroup]="formGroup" (ngSubmit)="save()">
     <mat-dialog-content>
@@ -6,6 +7,24 @@
             <mat-label>Title</mat-label>
             <input matInput formControlName="title" placeholder="Title">
         </mat-form-field>
+        <div class="row mb-3">
+            <div *ngIf="imagePreview != '' && imagePreview != null && formGroup.get('image').valid" class="col ml-4 image-preview">
+                <img [src]="imagePreview" [alt]="formGroup.value.title">
+            </div>
+            <div *ngIf="isEdit && (imagePreview == '' || imagePreview == null) && section.imagePath != null" class="col ml-4 image-preview">
+                <img [src]="section.imagePath" [alt]="formGroup.value.title">
+            </div>
+            <div *ngIf="formGroup.get('image').value && formGroup.get('image').errors" class="error col ml-4">
+                <!-- <div *ngIf="formGroup.get('image').errors.required">Image is required</div> -->
+                <div *ngIf="formGroup.get('image').errors.invalidMimeType">Invalid Image File</div>
+            </div>
+            <div class="col text-right mr-2">
+                <button mat-mini-fab color="primary" type="button" (click)="imagePicker.click()">
+                    <mat-icon>image</mat-icon>
+                </button>
+                <input type="file" (change)="onImagePicked($event)" hidden #imagePicker>
+            </div>
+        </div>
         <!-- <ckeditor formControlName="body" [config]="editorConfig"></ckeditor> -->
         <ngx-wig  formControlName="body"></ngx-wig>
     </mat-dialog-content>

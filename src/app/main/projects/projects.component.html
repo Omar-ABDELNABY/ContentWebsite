@@ -1,0 +1,34 @@
+<div class="main-container">
+    
+    <div class="title-div">
+        <h3 class="section-title">Our Projects</h3>
+        <div class="underline-title"></div>
+    </div>
+    <div class="free-text">
+        <p>
+            With 100+ projects all over Egypt there’s no place we have not been there yet
+        </p>
+    </div>
+    <div class="flex-container">
+        <div *ngFor="let image of projectsImages" class="flex-item">
+            <img [src]="image">
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="title-div">
+        <h3 class="section-title">Our partners</h3>
+        <div class="underline-title"></div>
+    </div>
+    <div class="free-text">
+        <p>
+            We are proud to have worked with some of the biggest names in the country
+        </p>
+    </div>
+    <div class="flex-container">
+        <div *ngFor="let image of partnersImages" class="flex-item">
+            <img [src]="image">
+        </div>
+    </div>
+</div>
